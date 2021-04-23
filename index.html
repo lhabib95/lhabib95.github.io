@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Embedding JavaScript</title>
+</head>
+<body>
+    <script>
+    var greet = "Hello World!";
+    document.write(greet + "<br>");
+    
+    var a = 25;
+    var b = 80.5;
+
+    document.write(a + "<br>");
+    document.write(b + "<br>");
+    document.write(a + b + "<br>");
+
+    var isTrue = true;
+    var isFalse = false;
+
+    document.write(isTrue + "<br>");
+    document.write(isTrue == isFalse);
+    document.write("<br>");
+
+    var cities = ["London", "Paris", "New York"];
+    document.write(cities[2] + "<br>");
+
+    function createGreeting(name)   {
+        return "My name is " + name;
+    }
+
+    var result = createGreeting("Luke")
+    document.write(result + "<br>");
+
+    var year = 2018;
+
+    if((year % 400 == 0) || ((year % 100 != 0) && (year % 4 ==0)))  {
+        document.write(year + " is a leap year" + "<br>");
+    }   else    {
+        document.write(year + " is not a leap year" + "<br>");
+    }
+
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        getArea() {
+            return this.length * this.width;
+        }
+
+        getPerimeter() {
+            return this.length*2 + this.width*2;
+        }
+    }
+
+    let rectangle1 = new Rectangle(5, 10);
+    document.write(rectangle1.getArea());
+    document.write("<br>");
+    document.write(rectangle1.getPerimeter());
+    document.write("<br>");
+
+
+    </script>
+</body>
+</html>
